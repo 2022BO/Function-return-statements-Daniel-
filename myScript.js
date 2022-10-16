@@ -1,109 +1,71 @@
-const paintIt = function (item) {
-  console.log("The wall has been painted" + ": " + item);
+// #1 Checking if a number is big
+
+const checkNumber = function (number) {
+  const sum = number >= 100;
+  return "number is big";
 };
-paintIt("red");
-paintIt("green");
-paintIt();
+const result = checkNumber(101);
+console.log(result);
 
-const paintSouth = "The south-east wall has been painted grey";
+//this function calculate something
 
-const paintNorth = "The north wall has been painted orange";
-paintIt(paintNorth + " and " + paintSouth);
-paintIt(paintSouth);
+// #2 Bouncer at a club
+//(HIERONDER EERST IF/ ELSE STATEMENTS GEMAAKT OM DE OPDRACHT TE MAKEN)
+// const bouncerCheck = function (maxmumNum, currentNum, agePerson) {
+/*.let maxmumNum = 45;
+if (maxmumNum <= 50) console.log("come in");
+else if (maxmumNum >= 50) console.log("it's too busy now, come back later");
 
-const paintAllWalls = "the rest of the walls are serveral colors";
+let currentNum = 45;
+if (currentNum <= 50) console.log("come in");
+else if (currentNum >= 80) console.log("it's not okay now, come back later");
 
-paintIt(paintNorth + " and " + paintSouth + " and " + paintAllWalls);
-paintIt(paintNorth + " dotted " + " and " + paintAllWalls + " like a Rainbow ");
+let agePerson = 15;
+if (agePerson >= 20) console.log("come in");
+else if (agePerson <= 20) console.log("this is a club for adults");*/
+// };
+// [(46, 36, 26)];
 
-const paintPainting = function (item) {
-  console.log("the artist made a painting :" + item);
+const maxmumNum = function (numMax, numCur, numAge) {
+  let sum = numMax;
+  if (sum <= 50) {
+    return "come in now";
+  }
+  let sum2 = numCur;
+  if (sum2 === 45) {
+    return "come in it is not to bussy";
+  }
+  let sum3 = numAge;
+  if (sum3 > 20) {
+    return "this is a club for adults";
+  }
+
+  return "it's too busy now, come back later";
 };
-const artPop = " like Andy Warhol ";
-const artPointillism = " like George Seurat ";
+// Brenda will return one of three sentences
+// This function produce something
+const result1 = maxmumNum(51, 16, 110);
+const result2 = maxmumNum(55, 45, 19);
+const result3 = maxmumNum(50, 45, 90);
+const result4 = maxmumNum(60, 35, 15);
+console.log(result1);
+console.log(result2);
+console.log(result3);
+console.log(result4);
+// klopt het dat je maar een resultaat krijgt door de return statement?
 
-paintPainting(artPop + " or " + artPointillism + " ? ");
+// #Calculating the average
 
-const cleanWalls = function (itemA, itemB, itemC, itemD, itemE) {
-  console.log(itemA);
-  console.log(" Color the wall white, remove: " + itemB + " paint ");
-  console.log(" paint ");
-  console.log(" verf " + " colors " + " rainbow ");
-  console.log(" Orange " + " orange "); //argument nu staat onderaan
+const averageNumbers = function (num1, num2, num3, num4, num5) {
+  const sumAverage = [num1 + num2 + num3 + num4 + num5] / 3;
+  return Math.round(sumAverage);
 };
-
-cleanWalls(
-  " Color the wall white, remove: " +
-    " red, " +
-    " blue, " +
-    " yellow, " +
-    " pink, " +
-    " rainbow "
-);
-cleanWalls(
-  " No colors the wall, remove: " +
-    " black " +
-    " green " +
-    " dotted " +
-    " striped "
-); //undefined als je niets aanroept
-
-const paintTwoArg = function (item2, item3) {
-  console.log("paint door" + ": " + item3 + "paint floor " + ":" + item2);
-};
-paintTwoArg("yellow", "black");
-paintTwoArg(" dotted ", " transparent ", " solid grey "); //zonder argument geen uitkomst
-
-const paintFiveArgs = function (item1, item2, item3, item4, item5) {
-  console.log(
-    " Paint the table " + ":" + item2,
-    "," + " paint de chairs " + ":" + item5,
-    `,` + " paint the lamp " + ":" + item1,
-    `,` + " paint the sofa " + ":" + item4,
-    " and " + " paint the closet " + ":" + item3
-  );
-};
-paintFiveArgs("purple", "silver", "brown", "white", "gold");
-paintFiveArgs("white", "gold", "brown", "purple", "silver");
-paintFiveArgs("white", "white", " ? ", "white", "white"); // volgorde van argumenten maakt wel uit
-
-const paintFourArgs = function (item1, item2, item3, item4) {
-  console.log(
-    " Paint the table " + ":" + item1,
-    "," + " paint de chairs " + ":" + item2,
-    `,` + " paint the lamp " + ":" + item3,
-    " and " + " paint the closet " + ":" + item4
-  );
-};
-paintFourArgs("purple", "silver", "white", "gold");
-paintFourArgs("white", "gold", "brown", "silver");
-paintFourArgs("white", "white", " ? ", "white"); // volgorde van argumenten maakt wel uit
-
-//maakt uit waar je wat schrijft! argumenten hebben weinig betekenis qua naam
-const drawThreeArgs = function (pensil, pen, brush) {
-  console.log(
-    "i like to drawings with" + ":" + pen + "," + pensil + "and" + brush
-  );
-};
-drawThreeArgs(" blue ", " yellow ", " red ");
-
-//argumenten niet in console.log -> wel aanroepen heeft geen effect.
-const drawSiXArg = function (item6, item7, item8, item9, item10, item11) {
-  console.log(
-    "i like to draw with" +
-      ":" +
-      item6 +
-      "," +
-      item7 +
-      "," +
-      item8 +
-      "," +
-      item9 +
-      "," +
-      item10 +
-      " and a" +
-      item11
-  );
-};
-drawSiXArg(" pensil ", " pen ", " brush", " hand", " crayon", " chalk ");
-drawSiXArg(" hand", " crayon", " chalk ");
+const result6 = averageNumbers(1, 2, 3, 4, 5);
+const result7 = averageNumbers(4, 2, 8, 10, 12);
+const result8 = averageNumbers(4, 3.6, 8, 13, 1.5);
+const result9 = averageNumbers(55.55, 77, 107, 33.3, 95);
+console.log(result6);
+console.log(result7);
+console.log(result8);
+console.log(result9);
+// This function calculate something
